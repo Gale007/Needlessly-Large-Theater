@@ -1,0 +1,29 @@
+body{
+
+	overflow-y:hidden;
+	background-attachment: fixed;
+}
+#hBadDayadc{
+	color:red;
+}
+#viewManager{
+
+	
+	height:400px;
+	color:white;
+
+}
+#getInfoButton{
+
+	/*position:fixed;
+	
+	height: 100%;
+	width: 100%;*/
+	
+}
+#testingScroll{
+	/*position:absolute;
+	height: 100%;
+	width: 100%;
+	top:1670px;*/
+}
