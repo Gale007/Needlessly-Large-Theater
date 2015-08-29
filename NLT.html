@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+	
+<html lang="en" ng-app="viewController">
+<head>
+	<meta charset="UTF-8">
+	<title>NLT Movies</title>
+	<link rel="stylesheet" type="text/css" href="/ApiChallenge/partials/championButton.css">
+	<link rel="stylesheet" type="text/css" href="css/nlrTheater.css">
+	<link rel="stylesheet" type="text/css" href="/ApiChallenge/partials/itemButton.css">
+	
+	<script src="/ApiChallenge/js/jquery.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+	<script src="/ApiChallenge/js/updatedAng_apiC.js"></script>
+	
+	
+	
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/scrolling-nav.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	
+</head>
+	<body>
+	
+	
+	
+		<div id="loadingScreen1">
+		
+					<div id="loading-Icon-Holder">
+					
+						<img src="css/league_posters/loading_Icon4.gif"  id="loading-Icon" width="50">			
+										
+							<script>
+							$( window ).load(function() {
+						 					
+						 		$("#loadingScreen1").remove()
+						 		$("#loading-Icon").remove()
+								
+										
+									});
+									
+								$(document).ready(function(){
+									  $(this).scrollTop(0);
+								});
+							</script>	
+					</div>
+							
+						
+				
+							
+			
+		</div>
+		
+		<div id="runes_masteries_Holder"  ng-controller="changeController">
+				<div id="innerHolder">	
+					<img src="css/stats/masteriesV2.jpg" class="statsimg">
+					<img src="css/stats/runeStats.jpg" class="statsimg">
+					
+				</div>	
+						
+		</div>
+		
+		
+		<div class="container-fixed" id="page-top" ng-controller="changeController" >
+
+						
+			<nav class="navbar navbar-inverse navbar-fixed-top na">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			   
+			      <a class="navbar-brand page-scroll" href="#page-top">Ruin the Ad Carry's Day!</a>
+			      
+			      
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			     
+			      <ul class="nav navbar-nav">
+			        <li class="active"><a class="page-scroll" href="#page-top">Champion Selector<span class="sr-only">(current)</span></a></li>
+			        
+			        <li><a href="" ng-click="masteries()">Masteries And Runes</a></li>
+			        
+			      </ul>
+			      
+			      <ul class="nav navbar-nav navbar-right">
+			        <li><a class="page-scroll" href="http://gloriousgale.com/ApiChallenge/TheaterHall.html#/">Lobby</a></li>
+			        
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>						
+
+
+			
+
+				<div class="pageTwo-first-section"  ng-controller="changeController" >
+				
+						<div class="container">
+						
+							<div class="row">
+							
+								<div class="col-lg-12">
+			
+								
+			
+								<div id="championTableHolder" >
+								
+								
+								
+					 			<table>
+					 			
+						
+									<tbody>
+						
+										<tr>
+						
+											<td>
+												<div class="buttonHolder">
+													<a href="#theaterCon" class="page-scroll"><button class="championButtons " id="firstChamp" ><img class="iconShrink"  src="http://hydra-media.cursecdn.com/lol.gamepedia.com/0/01/LuxSquare.png?version=4aea602fccd47e1b9e9b7ab69589565d"></a>
+													</button>
+												</div>
+											</td>
+						
+										
+						
+											<td>
+												<div class="buttonHolder">
+													<a href="#theaterCon" class="page-scroll"><button class="championButtons" id="secondChamp"><img class="iconShrink"  src="http://img1.wikia.nocookie.net/__cb20141013225503/leagueoflegends/images/1/13/AhriSquare_old.png">
+													</button></a>
+												</div>
+											</td>
+						
+						
+											<td>
+												<div class="buttonHolder">
+													<a href="#theaterCon" class="page-scroll"><button class="championButtons" id="thirdChamp"><img class="iconShrink"  src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/Leblanc.png">
+													</button></a>
+												</div>
+											</td>
+						
+						
+											<td>
+												<div class="buttonHolder">
+													<a href="#theaterCon" class="page-scroll"><button class="championButtons" id="fourthChamp"><img class="iconShrink"  src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/Fizz.png">
+													</button></a>
+												</div>
+											</td>
+										
+											
+											<td>
+												<div class="buttonHolder">
+													<a href="#theaterCon" class="page-scroll"><button class="championButtons" id="fifthChamp"><img class="iconShrink" src="http://img3.wikia.nocookie.net/__cb20150404100758/leagueoflegends/images/6/6f/AnnieSquare.png">
+													</button></a>
+												</div>
+											</td>
+						
+						
+										
+											
+											<td>
+												<div class="buttonHolder">
+													<a href="#theaterCon" class="page-scroll"><button class="championButtons" id="seventhChamp"><img class="iconShrink" src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/Anivia.png">
+													</button></a>
+												</div>
+											</td>
+											
+											<td>
+												<div class="buttonHolder">
+													<a href="#theaterCon" class="page-scroll"><button class="championButtons" id=""><img class="iconShrink" src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/Katarina.png">
+													</button></a>
+												</div>
+											</td>
+										</tr>
+										
+										<tr>
+											<td style="text-align:center">Lux</td>
+											<td style="text-align:center">Ahri</td>
+											<td style="text-align:center">Ashe</td>
+											<td style="text-align:center">Amumu</td>
+											<td style="text-align:center">Annie</td>
+											<td  style="text-align:center">Aniva</td>
+											<td  style="text-align:center">Katarina</td>
+										</tr>
+									</tbody>
+						
+								</table>
+								
+								
+								<!--this is a new table that will handle the item recognition and -->
+								<!--there will be tables for each champ with item that lead to different locations this will be the first champ-->
+								
+							</div>
+							
+							
+							<!--this is for multiple items, for if I decide to make a version with all the items.-->
+							<div id="firstitemTableHolder" class="itemTableHolder">
+								
+									<!--<table id="firstChampItems">
+							
+										<tbody>
+							
+											<tr>
+							
+												<td>
+													<div class="itemButtonHolder">
+														<a class="itemButtons page-scroll" id="champFirstItem" href="#theaterCon"><img class="itemiconShrink"  src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/item/1058.png">
+														
+														</a>
+													</div>
+												</td>
+							
+											
+							
+												<td>
+													<div class="itemButtonHolder">
+														<a class="itemButtons page-scroll"  id="champSecondItem" href="#theaterCon"><img class="itemiconShrink"  src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/item/3003.png">
+														</a>
+													</div>
+												</td>
+							
+							
+												<td>
+													<div class="itemButtonHolder">
+														<a class="itemButtons page-scroll"  id="champThirdItem" href="#theaterCon"><img class="itemiconShrink"  src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/item/3089.png">
+														</a>
+													</div>
+												</td>
+							
+							
+												<td>
+													<div class="itemButtonHolder">
+														<a class="itemButtons page-scroll"  id="champFourthItem" href="#theaterCon"><img class="itemiconShrink"  src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/item/3135.png">
+														</a>
+													</div>
+												</td>
+											
+												
+												<td>
+													<div class="itemButtonHolder">
+														<a class="itemButtons page-scroll"  id="champFifthItem" href="#theaterCon"><img class="itemiconShrink" src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/item/3116.png">
+														</a>
+													</div>
+												</td>
+												
+												
+												<td>
+													<div class="itemButtonHolder">
+														<a class="itemButtons page-scroll"  id="champSixthItem" href="#theaterCon"><img class="itemiconShrink" src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/item/3151.png">
+														</a>
+													
+													</div>
+												</td>
+												
+												<td>
+													<div class="itemButtonHolder">
+														
+														<a class="itemButtons page-scroll"  id="champSeventhItem" href="#theaterCon"><img class="itemiconShrink" src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/item/3157.png">
+														</a>
+													
+													</div>
+												</td>
+												
+												<td>
+													<div class="itemButtonHolder">
+														
+														<a class="itemButtons page-scroll"  id="champSeventhItem" href="#theaterCon"><img class="itemiconShrink" src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3285.png">
+														</a>
+													
+													</div>
+												</td>
+												
+												<td>
+													<div class="itemButtonHolder">
+														
+														<a class="itemButtons page-scroll"  id="champEighthItem" href="#theaterCon"><img class="itemiconShrink" src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3029.png">
+														</a>
+													
+													</div>
+												</td>
+												
+												
+											
+												<td>
+													<div class="itemButtonHolder">
+														
+														<a class="itemButtons page-scroll"  id="champTenthItem" href="#theaterCon"><img class="itemiconShrink" src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3115.png">
+														</a>
+													
+													</div>
+												</td>
+												
+												<td>
+													<div class="itemButtonHolder">
+														
+														<a class="itemButtons page-scroll"  id="champTenthItem" href="#theaterCon"><img class="itemiconShrink" src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3152.png">
+														</a>
+													
+													</div>
+												</td>
+												
+												
+												
+												<td>
+													<div class="itemButtonHolder">
+														
+														<a class="itemButtons page-scroll"  id="champEleventhItem" href="#theaterCon"><img class="itemiconShrink" src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3165.png">
+														</a>
+													
+													</div>
+												</td>
+												
+												<td>
+													<div class="itemButtonHolder">
+														
+														<a class="itemButtons page-scroll"  id="champEleventhItem" href="#theaterCon"><img class="itemiconShrink" src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3174.png">
+														
+														</a>
+													
+													</div>
+												</td>
+											</tr>
+											
+											<tr>
+												<td style="text-align:center">{{itemNLR}}</td>
+												<td style="text-align:center">{{itemArch}}</td>
+												<td style="text-align:center">{{itemRabadons}}</td>
+												<td style="text-align:center">{{itemVoid}}</td>
+												<td style="text-align:center">{{itemRylais}}</td>
+												<td style="text-align:center">{{itemLiandrys}}</td>
+												<td style="text-align:center">{{itemZhonyas}}</td>
+												<td style="text-align:center">{{itemLudens}}</td>
+												<td style="text-align:center">{{itemRoA}}</td>
+												<td style="text-align:center">{{itemNashors}}</td>
+												<td style="text-align:center">{{itemWota}}</td>
+												<td style="text-align:center">{{itemMorello}}</td>
+												<td style="text-align:center">{{itemAthenes}}</td>
+												
+												
+											</tr>
+										</tbody>
+							
+									</table>-->
+									
+									
+								</div>
+							</div>
+						</div>
+					</div>
+										
+				</div>
+			
+			
+			
+			
+			<div class="Video-section" id="theaterCon">
+				<div class="container">
+					
+						<div class="row">
+						
+							<div class="col-lg-12">
+								
+								<div class="embed-responsive embed-responsive-16by9">
+								  <iframe class="embed-responsive-item" id="videoDemo" src="" frameborder="0" allowfullscreen="true" width="40" height="40"></iframe>
+								
+								  
+								</div>
+								
+								
+								
+							</div>
+						</div>
+				</div>
+			</div>		
+			
+		</div>
+			
+			
+			<script type="text/javascript" src="partials/tablevisibility.js"></script>
+			<script src="/ApiChallenge/js/jquery.easing.min.js"></script>
+			<script src="/ApiChallenge/js/scrolling-nav.js"></script>
+		</body>
+</html>

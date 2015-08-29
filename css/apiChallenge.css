@@ -1,0 +1,180 @@
+body{
+
+	overflow-y:hidden;
+	background-attachment: fixed;
+	background-color:black;
+	background-size:cover;
+	background-image:url("league_pictures/theaterWallNew.jpg");
+}
+
+
+
+
+/*loading screen/ icon options*/
+#loadingScreen1{
+	
+	background-color:black;
+	width:100%;
+	height:100%;
+	opacity:1;
+	position:fixed;
+	z-index:24440;
+}
+
+#loading-Icon-Holder{
+	
+	position:relative;
+	top: 50%;
+}
+#loading-Icon{
+	
+	position:static;
+	display:block;
+	width:400;
+	
+	margin:0 auto;
+	z-index:1001;
+	
+}
+
+
+
+#colorHolder{
+
+	background-color:black;
+}
+
+/*api challenge*/
+#crowdSounds{
+	position:absolute;
+	top:40px;
+	left:40px;
+
+}
+
+/*the red and blue identifier that is put beneath the chart*/
+#chartId1{
+
+	background-color:red;
+	position:absolute;
+	float:left;
+	
+	width:10px;
+	height:10px;
+
+}
+
+#chartId2{
+
+	background-color:blue;
+	position:absolute;
+	left: 40px;
+	
+	width:10px;
+	height:10px;
+
+}
+
+
+#chartIdNew{
+
+	position:relative;
+	top:10px;
+
+}
+
+#chartIdOld{
+
+	position:relative;
+	top:10px
+	
+}
+
+
+/*options for the velkoz page charts*/
+
+
+#viewManager{
+
+	
+	
+	color:white;
+
+}
+#itemviewManager{
+
+	
+	height:200px;
+	color:black;
+
+}
+/*close chart holder handles the divs and specifications inside the darkened area of the div*/
+
+#closeChartHolder{
+	height:100%;
+	width:100%;
+	
+	background-color: rgba(0,0,0, 0.5);
+	opacity:1;
+}
+
+
+/*scaling chart to lower reso screens*/
+@media(max-width:1400px)
+{
+	#testChartMid{
+		position:relative;
+		
+	}
+}
+#imgBorder{
+	border-radius: 70%;
+	
+}
+
+
+
+/*twisted table info*/
+
+#firstDataTable{
+	color:white;
+	background-color:rgba(0, 0, 0, 0.2)
+}
+
+#firstDataTable  td{
+	
+	background-color:rgba(0, 0, 0, 0.8)
+
+}
+#first-background{
+	
+	width:100%;
+	height:100%;
+	
+}
+/*classes section*/
+
+/*Will p*/
+.testVideo{
+	border-radius:75%;
+	
+	overflow: hidden;
+}
+.testView{
+	background-color: black;
+	color:orange;
+	font-size: 200%;
+}
+
+
+/*holds the img above the posters that lists the name of the location.*/
+
+.posterTitleHolder{
+	
+	
+	background-color:black;
+	border-radius:15%;
+	border-style: groove;
+	border-color:grey;
+	
+}

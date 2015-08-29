@@ -1,0 +1,37 @@
+.championButtons{
+	
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    
+   
+}
+#firstChampItems{
+
+	visibility: hidden;
+}
+
+.iconShrink{
+    width:120px;
+    height:120px;
+}
+@media(min-width:800px) {
+
+
+#championTableHolder{
+	margin:0px;
+	color:orange;
+	padding-left:100px;
+	min-width:720px;
+	max-width:720px;
+	}
+
+.itemTableHolder{
+	margin:0px;
+	padding-left:70px;
+	min-width:720px;
+	max-width:720px;
+	}
+}

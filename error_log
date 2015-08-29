@@ -1,0 +1,5 @@
+[11-Aug-2015 19:53:12 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gale007/public_html/ApiChallenge/testing2.php on line 27
+[12-Aug-2015 07:38:55 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gale007/public_html/ApiChallenge/testing2.php on line 81
+[12-Aug-2015 07:40:31 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gale007/public_html/ApiChallenge/testing2.php on line 81
+[12-Aug-2015 07:46:02 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gale007/public_html/ApiChallenge/testing2.php on line 81
+[12-Aug-2015 09:01:10 UTC] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in /home/gale007/public_html/ApiChallenge/testing2.php on line 86
