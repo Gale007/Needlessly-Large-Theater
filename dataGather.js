@@ -14,12 +14,12 @@ $(document).ready(function(){
 
 	RiotApiChallenge.prototype.readData = function(json){
 		console.log(json);
-
-		for(var i = 0; i <= json.length; i++)
-			{
-				console.log(i);
-				json[i]
-			}
+		var i = 0;
+		/*for(var i = 0; i <= json.length;)
+			{*/
+				
+		setInterval(function (){console.log(json[i]); i++;}, 2000);
+		
 	}
 
 	var page = new RiotApiChallenge();

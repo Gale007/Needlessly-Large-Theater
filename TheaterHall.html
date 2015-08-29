@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="viewController">
+	<head>
+		<meta charset="UTF-8">
+		<title>Needlessly Large Theater</title>
+		
+		
+		<script src="jquery-1.11.3.min.js"></script>
+		
+		
+		<!--the main index page that will link to different information and tools around the site.-->
+		<!--in order for certain aspects of angular to work it must be placed after jquery has been initialized-->
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.8/css/jquery.dataTables.css">
+ 
+
+		<link rel="stylesheet" href="css/bootstrap.css">
+
+
+		<!-- these stylesheets handle the added css apps which deal with the charts in the vel section, all animation  with apiChallenge.css dealing with the  more direct styling of aspects on the page-->		
+		<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"/>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" type="text/css" href="css/Chart.css">
+		<link rel="stylesheet" type="text/css" href="css/scrolling-nav.css">
+		<link rel="stylesheet" type="text/css" href="css/apiChallenge.css">
+	</head>
+		
+		
+		
+	
+	<body id="page-top" data-spy="scroll" data-target="">
+
+		<!--this code deals with the loading screen 
+			In order to change the bg the icon change the sources in img id loading icon -->
+		<div id="loadingScreen1">
+		
+					<div id="loading-Icon-Holder">
+					
+						<img src="css/league_posters/loading_Icon4.gif"  id="loading-Icon" width="50">			
+										
+							<script>
+							$( window ).load(function() {
+						 					
+						 		$("#loadingScreen1").remove()
+						 		$("#loading-Icon").remove()
+								document.getElementById("crowdSounds").play()
+								$("#crowdSounds").prop("volume", 0.01)			
+									});
+									
+								$(document).ready(function(){
+									  $(this).scrollTop(0);
+								});
+								
+								
+								$(document).ready(function(){
+								    $('[data-toggle="tooltip"]').tooltip(); 
+								});
+							</script>	
+					</div>
+							
+						
+				
+							
+			
+		</div>
+		
+		
+		
+		<div class="container-fixed">
+						
+
+		<!--sound options. background crowd noise-->
+		<audio loop id="crowdSounds">
+			<source src="css/sounds/theaterSounds.mp3">
+		</audio>
+		<!--This is the seperator for the bootstrap class and options
+			Will have to go in here later to change a few things around 
+			like the menu names and colors. -->
+
+
+
+
+			<nav class="navbar navbar-inverse navbar-fixed-top na">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand page-scroll" href="#page-top">Ruin the Ad Carry's Day!</a>
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="changeController">
+			      <ul class="nav navbar-nav">
+			        <li class="active"><a class="page-scroll" href="#page-top">Venue Picker<span class="sr-only">(current)</span></a></li>
+			        
+			        <li><a class="page-scroll" href="#getInfoButton">VelKoz's Stats Corner</a></li>
+			        
+			        <li><a class="page-scroll" href="#cartsPie">Twisted Table</a></li>
+			        
+			        <li><a ng-click="audioControl()">Stop/Start Sound</a></li>
+			      </ul>
+			      
+			      <ul class="nav navbar-nav navbar-right">
+			        <li><a class="page-scroll" href="http://gloriousgale.com/ApiChallenge/NLT.html">Veigars Movie Room</a></li>
+			        
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>			
+
+			
+			
+				<div class="first-section"  id="first-background"  ng-controller="changeController">
+				
+					<div class="container" >
+					
+						<div class="row">
+						
+							<div class="col-lg-12">
+								
+									<!--the view manager has to deal with changing the location and selection of the ng view. view selector deals with the action of the "next" arrow button being clicked. atm it will change the view to the next one in line (line order found in js file updatedAng_apiC.js)-->
+									
+										<div id="viewManager" ng-controller="changeController" >
+						`					<ng-view ></ng-view>
+											
+											<a  id="viewSelector" ng-click="viewChangeFuncLeft()"  ng-controller="changeController"><button class="testView glyphicon glyphicon-arrow-left btn-lg" data-toggle="tooltip" data-placement="bottom" title="click to go to next option"></button></a>
+											
+											<!--<a  id="viewSelector2" ng-click="viewChangeFuncRight()"  ng-controller="changeController"><button class="testView glyphicon glyphicon-arrow-right btn-lg"></button></a>-->
+											
+										</div>
+										
+									
+								</div>
+							</div>
+						</div>
+				</div>
+			
+			
+			<!--this deals with the charts in the velkoz section it will handle. chartId1 and 2 deal with the color coding specifiers in the right cornor of the box-->
+			<div id="getInfoButton" class="third-section chartOverlay" ng-controller="changeController">
+							<div class="container">
+								<div class="row">
+									
+									<div class="col-lg-12" >
+										
+										
+											
+											
+										<div id="testChartMid"  >
+											
+											<div id="closeChartHolder">
+												
+												<canvas id="naTestChart" width="750" height="400" class="chartHover"></canvas>
+												
+											    <div id="colorHolder">
+											    	
+												<div id="chartId1" width="10" height="10"><p id="chartIdNew">Old Items</p></div>
+												<div id="chartId2" width="10" height="10"><p id="chartIdOld">New Items</p></div>
+												
+											    </div>
+												<p id="chartIdentifier">KR NORMAL</p>
+											</div>
+											
+											
+										</div>	
+										
+											<button id="leftButtonNav" ng-click="chartChangeLeftFunc()" class="glyphicon glyphicon-arrow-left btn-md btn-success" data-toggle="tooltip" data-placement="bottom" title="switch region"></button>
+												
+											<a href="#page-top" class="page-scroll"><button class="btn-md glyphicon glyphicon-chevron-up btn-success" data-toggle="tooltip" data-placement="bottom" title="back to top."></button></a>
+													
+											<button id="ladderId" type="button" class="btn-md btn-primary" data-toggle="tooltip" data-placement="bottom" title="switch between ranked and normal games">NORMAL</button>
+											<!--<button id="rightButtonNav" ng-click="chartChangeRightFunc()" class="glyphicon glyphicon-arrow-right btn-md btn-success"></button>-->
+										
+											
+											
+													</div>
+											</div>
+									</div>
+							</div>
+							
+						<!--This handles the table for what item was purchased the most, it is divided by rankings-->					
+						<div id="cartsPie" class="fourth-section" ng-controller="changeController">
+							<div class="container">
+								<div class="row">
+									
+									<div class="col-lg-12" >
+										
+										
+									<h2>Twisted Tables</h2>
+									<h4>MOST PURCHASED ITEM FOR EACH RANK ABOVE PLAT!</h4>
+									<div>
+									
+									<table id="firstDataTable" width="100">
+												<style type="text/css">
+													.dataTables_filter {
+														display: none; 
+													}
+												</style>
+												
+												
+												<thead>
+													<tr>
+														<th>
+															"Ranking"
+														</th>
+														<th>
+															"Most Purchased"
+														</th>
+														
+														<th>
+															"2nd Most Purchased"
+														</th>
+														
+														<th>
+															"3rd Most Purchased"
+														</th>
+														
+														<th>
+															"4th Most Purchased"
+														</th>
+														
+														<th>
+															"5th Most Purchased"
+														</th>
+													</tr>
+												</thead>
+												
+												<tbody>
+													
+													<!--OLD ITEM KR-->
+													
+													<!--challenger-->
+													
+													<tr>
+														<td><img src="css/ranked_icons/challenger-Icon.png" id="">1</td>
+														<td> <!--voidstaff--><img src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3135.png" id="challengerMP"></td>
+														<td> <!--rabadons--><img src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3089.png" id="challenger2ndMP"></td>
+														<td><!--morellos--><img src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3165.png" id="challenger3rdMP"></td>
+														
+														<td>
+															<img src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3285.png" id="challenger4thMP">
+														</td>
+														
+														<td>
+															<img src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3157.png" id="challenger5thMP">
+														</td>
+														
+													</tr>
+												
+												
+												
+													<tr>
+														<td><img src="css/ranked_icons/master-Icon.png">2</td>
+														<td><!--zhonyas--><img src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3157.png" id="masterMP"></td>
+														<td><!--ludens--><img src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3285.png" id="master2ndMP"></td>
+														<td><!--rabadons--><img src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3089.png" id="master3rdMP"></td>
+														
+														<td>
+															<img src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3135.png" id="master4thMP">
+														</td>
+														
+														<td>
+															<img src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3165.png" id="master5thMP">
+														</td>
+														
+													</tr>
+												
+													<tr>
+														<td><img src="css/ranked_icons/diamond-Icon.png">3</td>
+														<td><img src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3157.png" id="diamondMP"></td>																					
+														<td><img src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3089.png" id="diamond2ndMP"></td>
+														<td><img src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3285.png" id="diamond3rdMP"></td>
+												
+														<td>
+															<img src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3165.png" id="diamond4thMP">
+														</td>
+														
+														<td>
+															<img src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3135.png" id="diamond5thMP">
+														</td>
+														
+														
+													</tr>
+													
+													
+													<tr>
+														<td><img src="css/ranked_icons/plat-Icon2.png">4</td>
+														<td><img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/3157.png" id="platMP"></td>
+														<td><img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/3089.png" id="plat2ndMP"></td>
+														<td><img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/3165.png" id="plat3rdMP"></td>
+													
+														<td>
+															<img src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3285.png" id="plat4thMP">
+														</td>
+														
+														<td>
+															<img src="http://ddragon.leagueoflegends.com/cdn/5.14.1/img/item/3135.png" id="plat5thMP">
+														</td>
+														
+													
+													</tr>
+													
+													
+													
+												</tbody>
+											</table>
+										
+										</div>	
+										
+										<button id="tableButton"ng-click="tableController()" class="btn-md btn-success">Switch To New Items</button>
+										<a href="#page-top" class="page-scroll"><button class="btn-md glyphicon glyphicon-chevron-up btn-success" data-toggle="tooltip" data-placement="bottom" title="back to top."></button></a>
+									</div>
+				
+								</div>
+				
+							</div>
+				
+						
+						<div>
+		
+		
+		
+		
+		
+		<script src="js/updatedAng_apiC.js"></script>
+		<script src="js/Chart.min.js"></script>
+		<script src="js/polarChartTest.js"></script>
+		<script type="text/javascript" src="js/jquery.dataTables.js"></script>
+		<script src="js/scrolling-nav.js"></script>
+		
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.easing.min.js"></script>
+		
+	</body>
+</html>

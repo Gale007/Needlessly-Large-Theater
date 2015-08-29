@@ -1,0 +1,63 @@
+body{
+	
+	overflow-y:hidden;
+	background-attachment: fixed;
+	background-image: url("league_pictures/curtainBG2.jpg");
+	background-color:black;
+	background-size:cover;
+}
+
+/*loading screen/ icon options*/
+#loadingScreen1{
+	
+	background-color:black;
+	width:100%;
+	height:100%;
+	opacity:1;
+	position:fixed;
+	z-index:24440;
+}
+
+#loading-Icon-Holder{
+	
+	position:relative;
+	top: 50%;
+}
+#loading-Icon{
+	
+	position:static;
+	display:block;
+	width:400;
+	
+	margin:0 auto;
+	z-index:1001;
+	
+}
+
+
+#runes_masteries_Holder{
+	position:absolute;
+	background-color:black;
+	height:70%;
+	width:100%;
+	z-index:5;
+	transition:opacity 2s;
+	opacity:0;
+	background-color: rgba(0,0,0, 0.8);
+	pointer-events:none;
+}
+
+#innerHolder{
+	position:absolute;
+	margin:0 auto;
+	
+	top: 30%;
+}
+
+.statsimg{
+	padding-left:100px;
+	position:static;
+	display:inline-block;
+	margin:0 auto;
+	
+}						

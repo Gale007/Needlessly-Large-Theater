@@ -1,5 +1,5 @@
 .itemButtons{
-    
+	
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
@@ -14,7 +14,7 @@
 }
 
 .itemButtonHolder{
-   padding:6px;
+   padding:3px;
    
 }
 .iconShrink{
@@ -23,9 +23,11 @@
 }
 
 .itemiconShrink{
-    width:120px;
-    height:120px;
+    width:70px;
+    height:70px;
 }
+
+
 @media(min-width:800px) {
 
 
