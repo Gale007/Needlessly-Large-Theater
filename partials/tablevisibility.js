@@ -34,10 +34,11 @@ $(document).ready(function(){
 
 	//this is code for the first set of items
 	 itemVisiblityChanger.prototype.firstItemSet = function(){
-	 	$("#videoDemo").attr('src', "https://www.youtube.com/embed/y4Gy5VPAOsE");
+	 	$("#videoDemo").attr('src', "https://www.youtube.com/embed/Gz9NBLL5feQ");
 	 
 	 
-	 
+	 	//code for if I decide to add more items to the viewing page
+	 	
 	 
 	 	/*if(easeTog >= 0 && vidList != 1)
 	 	{
@@ -113,7 +114,7 @@ $(document).ready(function(){
 	itemVisiblityChanger.prototype.fourthItemSet = function(){
 	
 	
-	
+	$("#videoDemo").attr('src', "https://www.youtube.com/embed/X2nQxWkcmYA");
 	
 	
 	
@@ -139,7 +140,7 @@ $(document).ready(function(){
 
 	itemVisiblityChanger.prototype.fifthItemSet = function(){
 	
-	$("#videoDemo").attr('src', "https://www.youtube.com/embed/X2nQxWkcmYA");
+	$("#videoDemo").attr('src', "https://www.youtube.com/embed/zH9o3TUlHXQ");
 	
 	
 		/*if(easeTog >= 0 && vidList != 5)
@@ -164,7 +165,7 @@ $(document).ready(function(){
 	itemVisiblityChanger.prototype.sixthItemSet = function(){
 	
 	
-	
+		$("#videoDemo").attr('src', "https://www.youtube.com/embed/y4Gy5VPAOsE");
 	
 		/*if(easeTog >= 0 && vidList != 6)
 	 	{
@@ -189,7 +190,7 @@ $(document).ready(function(){
 
 	itemVisiblityChanger.prototype.seventhItemSet = function(){
 	
-		$("#videoDemo").attr('src', "https://www.youtube.com/embed/y4Gy5VPAOsE");
+		$("#videoDemo").attr('src', "https://www.youtube.com/embed/NZsg6siE6PM");
 	
 	
 		
