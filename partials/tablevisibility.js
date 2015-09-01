@@ -34,6 +34,7 @@ $(document).ready(function(){
 
 	//this is code for the first set of items
 	 itemVisiblityChanger.prototype.firstItemSet = function(){
+	 //lux
 	 	$("#videoDemo").attr('src', "https://www.youtube.com/embed/Gz9NBLL5feQ");
 	 
 	 
@@ -60,6 +61,9 @@ $(document).ready(function(){
 
 
 	itemVisiblityChanger.prototype.secondItemSet = function(){
+		//Ahri
+	
+	
 		$("#videoDemo").attr('src', "https://www.youtube.com/embed/7akKyD3OPGE");
 	
 	
@@ -85,11 +89,12 @@ $(document).ready(function(){
 	}
 
 	itemVisiblityChanger.prototype.thirdItemSet = function(){
+	$("#videoDemo").attr('src', "https://www.youtube.com/embed/n_r5KJtsLTk");
 	
 	
 	
-	
-	
+		//leblanc
+		
 		/*if(easeTog >= 0 && vidList != 3)
 	 	{
 	 		document.getElementById("firstChampItems").style.visibility = "visible";
@@ -114,11 +119,11 @@ $(document).ready(function(){
 	itemVisiblityChanger.prototype.fourthItemSet = function(){
 	
 	
-	$("#videoDemo").attr('src', "https://www.youtube.com/embed/X2nQxWkcmYA");
+	$("#videoDemo").attr('src', "https://www.youtube.com/embed/EnpPuXG7ciQ");
 	
 	
 	
-	
+	//fizz
 		/*if(easeTog >= 0 && vidList != 4)
 	 	{
 	 		document.getElementById("firstChampItems").style.visibility = "visible";
@@ -141,7 +146,7 @@ $(document).ready(function(){
 	itemVisiblityChanger.prototype.fifthItemSet = function(){
 	
 	$("#videoDemo").attr('src', "https://www.youtube.com/embed/zH9o3TUlHXQ");
-	
+	//annie
 	
 		/*if(easeTog >= 0 && vidList != 5)
 	 	{
@@ -163,7 +168,7 @@ $(document).ready(function(){
 	}
 
 	itemVisiblityChanger.prototype.sixthItemSet = function(){
-	
+	//anivia
 	
 		$("#videoDemo").attr('src', "https://www.youtube.com/embed/y4Gy5VPAOsE");
 	
@@ -189,7 +194,7 @@ $(document).ready(function(){
 
 
 	itemVisiblityChanger.prototype.seventhItemSet = function(){
-	
+	//katarina
 		$("#videoDemo").attr('src', "https://www.youtube.com/embed/NZsg6siE6PM");
 	
 	
