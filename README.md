@@ -19,12 +19,12 @@ Animate.css,
 Chart.js,
 Scrolling js,
 Angular
-
+jquery.dataTables.css
 (back end)
 Php with mySql
 
 # Basic php template
-The php files were each matched with a specific json file from the regions listed above. After being created and matched, the php file would then decode the json file and plug in the match Id to riot api url. After the matchId and data are found I stored all the items purchased by each member in the game in an array that would then check and store every item in one table, and if the item code matched a specified ap then it would mark that change in another table in mysql. Each time the php file was called it checked and stored the data of 300 games. In order to increase the amount of games one could simply change the $scv for loop to whatever number they find appropriate. (another table was used to keep track of which game the php file last read, and will plug the next game in line in after the next to the code runs) 
+The php files were each matched with a specific json file from the regions listed above. After being created and matched, the php file would then decode the json file and plug in the match Id to riot api url. After the matchId and data are found I stored all the items purchased by each member in the game in an array that would then check and store every item in one table, and if the item code matched a specified ap then it would mark that change in another table in mysql. Each time the php file was called it checked and stored the data of 300 games. In order to increase the amount of games one could simply change the $scv for loop to whatever number they find appropriate. (another table was used to keep track of which game the php file last read, and will plug the next game in line in after the next to the code runs)  Getting the ranked stats for specific devisions does things very similarly, just checking the rank of the player first before sorting the data into each table, (very few master and challenger players, but expected I guess.)
 
 # FOR THE UNRANKED:
 I basically created automated jobs that run search the match history for games riot gave me and tally up each time specific ap items (decided by myself) are purchased, this isn’t always as easy as looking for the name of the item to pop up but rather codes that correspond to specific items, by going to riot api and checking static data you can see the corresponding code for each item in the game. 
