@@ -18,6 +18,7 @@ Twitter Bootstrap,
 Animate.css,
 Chart.js,
 Scrolling js,
+Angular
 
 (back end)
 Php with mySql
