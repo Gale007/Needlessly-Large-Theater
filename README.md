@@ -25,12 +25,12 @@ Php with mySql
 # Basic php template
 The php files were each matched with a specific json file from the regions listed above. After being created and matched, the php file would then decode the json file and plug in the match Id to riot api url. After the matchId and data are found I stored all the items purchased by each member in the game in an array that would then check and store every item in one table, and if the item code matched a specified ap then it would mark that change in another table in mysql. Each time the php file was called it checked and stored the data of 300 games. In order to increase the amount of games one could simply change the $scv for loop to whatever number they find appropriate (another table was used to keep track of which game the php file last read, and will plug the next game in line in after the next to the code runs). 
 
-( # FOR THE UNRANKED
-	I basically created automated jobs that run search the match history for games riot gave me and tally up each time specific ap items (decided by myself) are purchased, this isn’t always as easy as looking for the name of the item to pop up but rather codes that correspond to specific items, by going to riot api and checking static data you can see the corresponding code for each item in the game. 
+ # FOR THE UNRANKED
+I basically created automated jobs that run search the match history for games riot gave me and tally up each time specific ap items (decided by myself) are purchased, this isn’t always as easy as looking for the name of the item to pop up but rather codes that correspond to specific items, by going to riot api and checking static data you can see the corresponding code for each item in the game. 
 
 Example: Rabadon’s Death cap = 3089
 Example: Luden’s Echo = 3285 
-so my code will take all the item numbers for a player, then check if it matches any of the specified ap items, then if an item does, essentially add a Tally mark on a table, on a separate data basing tool called mySql )
+so my code will take all the item numbers for a player, then check if it matches any of the specified ap items, then if an item does, essentially add a Tally mark on a table, on a separate data basing tool called mySql.
 
 
 
@@ -41,8 +41,8 @@ so my code will take all the item numbers for a player, then check if it matches
  
  
 # FOR THE UNRANKED
- 	For those reading who aren’t as familiar with coding: To make the scroll effect that happens each time you click on a link on the page I used a library that lets me dictate the location I want the browser to scroll too, as well as the specifications of the location, like how tall or short I want it. It then talks about how I used the angular framework (think of it as an extra tool box) as a way to load in completely separate html files within the page without leaving/refreshing using a tool called the angular view. This Is not the only way to achieve the effect of the champion posters changing, but I wanted to practice a bit with this as I wasn’t as familiar with it beforehand. 
+	(For those reading who aren’t as familiar with coding: To make the scroll effect that happens each time you click on a link on the page I used a library that lets me dictate the location I want the browser to scroll too, as well as the specifications of the location, like how tall or short I want it. It then talks about how I used the angular framework (think of it as an extra tool box) as a way to load in completely separate html files within the page without leaving/refreshing using a tool called the angular view. This Is not the only way to achieve the effect of the champion posters changing, but I wanted to practice a bit with this as I wasn’t as familiar with it beforehand. 
 
-     angular also let me store commands, that would activate when a specific event occurred, in the case of the first page, I have a list of commands that activate if the button beneath the posters are clicked, then the commands go off which boil down to move the first poster/view one way, once that action is complete proceed to load next poster/view, then move that poster up from the bottom of the page. I did this to attempt to create the effect of actually moving around the theater from poster to poster.)
+	angular also let me store commands, that would activate when a specific event occurred, in the case of the first page, I have a list of commands that activate if the button beneath the posters are clicked, then the commands go off which boil down to move the first poster/view one way, once that action is complete proceed to load next poster/view, then move that poster up from the bottom of the page. I did this to attempt to create the effect of actually moving around the theater from poster to poster.)
 
 I learned a lot and got a lot of practice so I Hope everyone enjoys! 
