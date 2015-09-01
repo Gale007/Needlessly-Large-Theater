@@ -1,5 +1,5 @@
 <?php
-	//error_reporting(0);
+	
 	header("Access-Control-Allow-Origin:*");
 
 	$servername= "localhost";
@@ -14,9 +14,6 @@
 	
 	
 	mysqli_close($exSql);
-	
-	//these are variables for the data not related to sql
-	
 	
 	
 	$exSql = new mysqli("$servername","$username","$password", "$dbname");

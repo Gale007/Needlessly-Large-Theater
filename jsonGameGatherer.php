@@ -1,5 +1,5 @@
 <?php
-	//error_reporting(0);
+	
 	header("Access-Control-Allow-Origin:*");
 	
 	$servername= "localhost";
@@ -10,12 +10,9 @@
 	
 	$myJsonFileHolder = file_get_contents("{json file}");
 	$jsonHandler = json_decode($myJsonFileHolder,true);
-	//$tracerOfMatchTracker = $matchTracker;
 	
 	
 	mysqli_close($exmpSql);
-	
-	//these are variables for the data not related to sql
 	
 	
 	
@@ -33,7 +30,7 @@
 	//this is the base way to output results onto your page, you have result = the data you want from a table then you use a while statment to fetch objs(or assoc) from the database, while using objs 	     
 	//dont use ''
 	
-	//for($scv = 0; $scv < 100; ++$scv){
+	for($scv = 0; $scv < 100; ++$scv){
 		if($result = $exmpSql->query("SELECT * FROM normal_new_item_counter")){
 			if($result->num_rows){
 				
